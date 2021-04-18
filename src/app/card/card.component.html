@@ -1,0 +1,19 @@
+<div class="card" *ngIf="data">
+  <div class="card__inner">
+    <mat-card class="card__front">
+      <div class="card__container">
+        <div class="card__circle"></div>
+        <img mat-card-image class="card__img" [src]="data.foto" />
+        <div class="card__attack">{{data.attack}}</div>
+        <mat-card-title class="card__name">{{data.name}}</mat-card-title>
+        <mat-card-subtitle class="card__desc">{{data.desc}}</mat-card-subtitle>
+        <div class="card__win" *ngIf="data.isWin">Win</div>
+      </div>
+    </mat-card>
+    <mat-card class="card__back">
+      <div class="card__item" *ngFor="let info of data.info | keyvalue">
+        <div>{{info.key}}</div><div>{{info.value}}</div>
+      </div>
+    </mat-card>
+  </div>
+</div>

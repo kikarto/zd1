@@ -1,0 +1,27 @@
+<div class="board">
+  <app-score [score]="score" class="board__score"></app-score>
+  <div class="board__cards">
+    <app-card [data]="cards[0]" [loading]="loading" class="board__player-1"></app-card>
+    <app-card [data]="cards[1]" [loading]="loading" class="board__player-2"></app-card>
+  </div>
+  <div class="board__play">
+    <button mat-fab color="primary" aria-label="Play button" *ngIf="loading" disabled>
+      <img src="/assets/loading.svg" class="loading" />
+    </button>
+    <button mat-fab color="primary" aria-label="Play button" (click)="play()" *ngIf="!loading">
+      <mat-icon>play_arrow</mat-icon>
+    </button>
+  </div>
+  <div class="board__bar">
+    <p>Choice model to compare: Person or Starship. You can reset score and start over.</p>
+    <button mat-mini-fab [color]="model === 'people' ? 'primary' : 'basic'" aria-label="Model person button" (click)="changeModel(true)">
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-mini-fab [color]="model === 'starships' ? 'primary' : 'basic'" aria-label="Model starship button" (click)="changeModel(false)">
+      <mat-icon>flight</mat-icon>
+    </button>
+    <button mat-button color="warn" aria-label="Reset button" (click)="reset()">
+      Reset
+    </button>
+  </div>
+</div>

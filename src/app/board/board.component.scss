@@ -1,0 +1,20 @@
+.board {
+  position: relative;
+  min-height: 600px;
+  min-width: 700px;
+
+  &__cards {
+    margin: 1em;
+    display: flex;
+    justify-items: center;
+    gap: 5em;
+    min-height: 460px;
+}
+
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}

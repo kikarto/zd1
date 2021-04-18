@@ -1,0 +1,34 @@
+.score {
+  margin: auto;
+  padding: 1em;
+  width: 80%;
+  background: var(--color-circle);
+  border-radius: 4em;
+  text-align: center;
+  color: #fff;
+
+  &__round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+
+    &-nr {
+      font-size: 5rem;
+      margin: .25em;
+    }
+  }
+
+  &__board {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+  }
+
+  &__player {
+    &--win {
+      font-size: 1.2rem;
+    }
+  }
+}

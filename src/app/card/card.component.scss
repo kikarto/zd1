@@ -1,0 +1,127 @@
+.card {
+  width: 300px;
+  height: 460px;
+  perspective: 1000px;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  &:hover &__inner {
+    transform: rotateY(180deg);
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    backface-visibility: hidden;
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    overflow: hidden;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--color-circle);
+
+    @media only screen and (max-height: 800px) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    max-height: 80%;
+    width: auto;
+    max-width: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__attack {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 5em;
+    padding: 0.5em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    background-color: var(--color-circle);
+    color: #fff;
+    text-align: center;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 1.5em;
+    left: 1em;
+    background: rgba(255,255,255,0.8);
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 0.5em;
+    left: 2em;
+    background: rgba(255,255,255,0.8);
+  }
+
+  &__win {
+    position: absolute;
+    top: 0.5em;
+    right: -1em;
+    padding: 1em 4em;
+    transform: rotate(15deg);
+    background-color: var(--color-circle);
+    border-radius: 3em;
+    color: #fff;
+  }
+
+  &__item {
+    padding: 0.5em 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    div:first-child {
+      opacity: 0.6;
+    }
+
+    div:last-child {
+      text-align: right;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Model } from 'src/enums/model';
+import { environment } from 'src/environments/environment';
 import { ICard } from 'src/interfaces/card';
 import { IScore } from 'src/interfaces/score';
 import { Board } from 'src/libs/board';
@@ -15,6 +16,7 @@ export class BoardComponent implements OnInit {
   cards: [ICard | null, ICard | null] = [null, null];
   loading = false;
   private board: Board = new Board();
+  loadingPath = `${environment.path}/assets/loading.svg`;
 
   constructor() {
     this.score = this.board.getScore;

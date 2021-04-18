@@ -6,7 +6,7 @@
   </div>
   <div class="board__play">
     <button mat-fab color="primary" aria-label="Play button" *ngIf="loading" disabled>
-      <img src="/assets/loading.svg" class="loading" />
+      <img [src]="loadingPath" class="loading" />
     </button>
     <button mat-fab color="primary" aria-label="Play button" (click)="play()" *ngIf="!loading">
       <mat-icon>play_arrow</mat-icon>

@@ -111,7 +111,7 @@ describe('card.ts > getFotoSrc', () => {
     const path = getFotoSrc(model);
     expect(typeof path).toEqual('string');
     expect(path.includes('person')).toEqual(true);
-    expect(path.startsWith('/assets/person-')).toEqual(true);
+    expect(path.startsWith(`/assets/person-`)).toEqual(true);
   });
 
   it('starship', () => {
@@ -119,6 +119,6 @@ describe('card.ts > getFotoSrc', () => {
     const path = getFotoSrc(model);
     expect(typeof path).toEqual('string');
     expect(path.includes('starship')).toEqual(true);
-    expect(path.startsWith('/assets/starship-')).toEqual(true);
+    expect(path.startsWith(`/assets/starship-`)).toEqual(true);
   });
 });

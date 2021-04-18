@@ -1,3 +1,4 @@
+import { environment } from '../environments/environment';
 import { Model } from '../enums/model';
 import { ICard } from '../interfaces/card';
 
@@ -34,5 +35,5 @@ export const parseAttack = (value: string): number | 'unknown' => {
 };
 
 export const getFotoSrc = (model: Model): string => {
-  return `/assets/${model === Model.Person ? 'person' : 'starship'}-${Math.round(Math.random() * 3) + 1}.webp`;
+  return `${environment.path}/assets/${model === Model.Person ? 'person' : 'starship'}-${Math.round(Math.random() * 3) + 1}.webp`;
 };

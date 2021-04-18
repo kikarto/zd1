@@ -44,6 +44,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "deployUrl": "https://markus.click/zd1/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,

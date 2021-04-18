@@ -114,10 +114,12 @@
 
     div:first-child {
       opacity: 0.6;
+      margin-left: 1em;
     }
 
     div:last-child {
       text-align: right;
+      margin-right: 1em;
     }
 
     &:not(:last-child) {

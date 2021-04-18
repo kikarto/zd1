@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  path: 'https://markus.click/zd1',
 };

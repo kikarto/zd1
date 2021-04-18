@@ -1,7 +1,14 @@
+@import "variables/media";
+@import "mixins/media";
+
 .board {
   position: relative;
   min-height: 600px;
   min-width: 700px;
+
+  @include media-phone {
+    min-width: auto;
+  }
 
   &__cards {
     margin: 1em;
@@ -9,6 +16,11 @@
     justify-items: center;
     gap: 5em;
     min-height: 460px;
+
+    @include media-phone {
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
   &__play {
@@ -16,5 +28,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(2);
+  }
+
+  &__bar {
+    text-align: center;
   }
 }
